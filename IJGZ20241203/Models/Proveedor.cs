@@ -28,5 +28,7 @@ namespace IJGZ20241203.Models
         [Required(ErrorMessage = "El campo { } es requerido")]
         [Display(Name ="Fecha de registro")]
         public DateTime FechaRegistro { get; set; }
+
+        public virtual IList<DireccionProveedor> DireccionesProveedor { get; set; }
     }
 }

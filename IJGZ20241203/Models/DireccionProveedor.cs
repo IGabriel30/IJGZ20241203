@@ -9,6 +9,8 @@ namespace IJGZ20241203.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdDireccion { get; set; }
         public int ProveedorId {  get; set; }
+        [ForeignKey("ProveedorId")]
+        public Proveedor Proveedor { get; set; }
 
         [Required(ErrorMessage = "El campo es requerido")]
         [StringLength(200,ErrorMessage ="200 caracteres maximo")]
@@ -21,5 +23,6 @@ namespace IJGZ20241203.Models
         [Required(ErrorMessage = "El campo País es requerido")]
         [MaxLength(50, ErrorMessage = "Máximo 50 caracteres")]
         public string Pais { get; set; }
+
     }
 }
